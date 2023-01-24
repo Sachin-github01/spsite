@@ -1,0 +1,6 @@
+.navbar_wrapper {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  background-color: blueviolet;
+}
