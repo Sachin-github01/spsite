@@ -1,0 +1,528 @@
+.intro_wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.intro_wrapper2 {
+  display: none;
+}
+.intro_content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rem;
+}
+.my_name {
+  display: flex;
+  flex-direction: column;
+}
+.my_name h1 {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: rgb(248, 179, 5);
+  text-shadow: 5px 1px rgb(10, 24, 218);
+}
+.my_name span {
+  font-size: 4rem;
+  font-weight: bolder;
+
+  background: -webkit-linear-gradient(rgb(233, 109, 7), rgb(10, 24, 218));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* skill box styles  */
+.skill_box {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.skill_box h3 {
+  font-size: 2rem;
+  font-weight: bolder;
+
+  background: -webkit-linear-gradient(rgb(233, 109, 7), rgb(10, 24, 218));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-top: 0.5rem;
+}
+.word {
+  display: inline-block;
+}
+.word span {
+  margin-top: 0.5rem;
+  width: 500px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  opacity: 0;
+  /* color: rgb(248, 179, 5); */
+  font-size: 2rem;
+  font-weight: bolder;
+
+  animation: animate 8s linear infinite;
+
+  background: -webkit-linear-gradient(rgb(233, 109, 7), rgb(10, 24, 218));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+.word span:nth-child(1) {
+  animation-delay: 0s;
+}
+.word span:nth-child(2) {
+  animation-delay: 2s;
+}
+.word span:nth-child(3) {
+  animation-delay: 4s;
+}
+.word span:nth-child(4) {
+  animation-delay: 6s;
+}
+.word span:nth-child(5) {
+  animation-delay: 8s;
+}
+/* button styles  */
+.intro_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 10rem; */
+  margin-top: 5rem;
+}
+.intro_buttons .button {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgb(248, 179, 5);
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid rgb(248, 179, 5);
+  padding: 1.5rem 6rem;
+
+  box-shadow: 0px 0px 5px 5px rgb(248, 179, 5);
+
+  /* background: rgb(248, 179, 5); */
+}
+.social_icons {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 40rem;
+}
+.social_icons a {
+  font-size: 1.9rem;
+  color: rgb(248, 179, 5);
+  cursor: pointer;
+}
+.social_icons a:hover {
+  transform: translateY(-2.5px);
+}
+.image_box {
+  position: relative;
+  width: 450px;
+  height: 450px;
+
+  margin-right: 15rem;
+  overflow: hidden;
+  border-radius: 50%;
+
+  background: -webkit-linear-gradient(rgb(253, 116, 3), rgb(4, 40, 240));
+}
+.image_box::before {
+  content: "";
+  position: absolute;
+  inset: -50px 50px;
+  background: linear-gradient(330deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animateimage 5s linear infinite;
+}
+.image_box:hover::before {
+  inset: -20px 0px;
+}
+@keyframes animateimage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.image_box::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  /* background: #162052; */
+  background: rgb(248, 179, 5);
+  border-radius: 50%;
+  z-index: 1;
+}
+.image_content {
+  display: flex;
+  position: absolute;
+  inset: 12px;
+  border: 6px solid #00ccff;
+  border-radius: 50%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.image_box2 {
+  display: none;
+}
+/* ************* Responsive css styles ********** */
+/* ************* Responsive css styles ********** */
+@media (max-width: 1800px) {
+  .intro_content {
+    margin-left: 12.5rem;
+  }
+  .image_box {
+    margin-right: 12.5rem;
+  }
+}
+@media (max-width: 1700px) {
+  .intro_content {
+    margin-left: 10rem;
+  }
+  .image_box {
+    margin-right: 10rem;
+  }
+}
+@media (max-width: 1600px) {
+  .intro_content {
+    margin-left: 7.5rem;
+  }
+  .image_box {
+    margin-right: 7.5rem;
+  }
+}
+@media (max-width: 1500px) {
+  .intro_content {
+    margin-left: 5rem;
+  }
+  .image_box {
+    margin-right: 5rem;
+  }
+}
+@media (max-width: 1400px) {
+  .intro_content {
+    margin-left: 2.5rem;
+  }
+  .image_box {
+    margin-right: 2.5rem;
+  }
+}
+@media (max-width: 1300px) {
+  .intro_content {
+    margin-left: 0.5rem;
+  }
+  .image_box {
+    margin-right: 1.5rem;
+  }
+  .my_name h1 {
+    font-size: 4rem;
+  }
+  .my_name span {
+    font-size: 3rem;
+  }
+  .skill_box h3 {
+    font-size: 1.8rem;
+  }
+  .word span {
+    font-size: 1.8rem;
+  }
+  .intro_buttons .button {
+    padding: 1.3rem 4rem;
+  }
+  .image_box {
+    width: 420px;
+    height: 420px;
+  }
+}
+/* New Html code for Responsive  */
+@media (max-width: 1200px) {
+  .intro_wrapper {
+    display: none;
+  }
+  .intro_wrapper2 {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    /* width: 50%; */
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-direction: column;
+    /* margin-top: 10rem; */
+  }
+  .image_box2 {
+    display: flex;
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: -webkit-linear-gradient(rgb(253, 116, 3), rgb(4, 40, 240));
+    margin-top: 5rem;
+  }
+  .image_box2::before {
+    content: "";
+    position: absolute;
+    inset: -50px 50px;
+    background: linear-gradient(330deg, #00ccff, #d400d4);
+    transition: 0.5s;
+    animation: animateimage2 5s linear infinite;
+  }
+  .image_box2:hover::before {
+    inset: -20px 0px;
+  }
+  @keyframes animateimage2 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .image_box2::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    background: rgb(248, 179, 5);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .image_content2 {
+    display: flex;
+    position: absolute;
+    inset: 12px;
+    border: 6px solid #00ccff;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+  .intro_content2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .my_name2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .my_name2 h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: rgb(248, 179, 5);
+    text-shadow: 5px 1px rgb(10, 24, 218);
+  }
+  .my_name2 span {
+    display: flex;
+    font-size: 2rem;
+    font-weight: bolder;
+
+    background: -webkit-linear-gradient(rgb(233, 109, 7), rgb(10, 24, 218));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .skill_box2 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+
+    margin-right: 15rem;
+  }
+  .skill_box2 h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+    background: -webkit-linear-gradient(rgb(233, 109, 7), rgb(10, 24, 218));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-top: 0.5rem;
+  }
+  .word2 {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+  }
+  .word2 span {
+    margin-top: 0.5rem;
+    width: 500px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    opacity: 0;
+    /* color: rgb(248, 179, 5); */
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+    animation: animate 8s linear infinite;
+
+    background: -webkit-linear-gradient(rgb(233, 109, 7), rgb(10, 24, 218));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    2% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    18% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    20% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+  .word2 span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .word2 span:nth-child(2) {
+    animation-delay: 2s;
+  }
+  .word2 span:nth-child(3) {
+    animation-delay: 4s;
+  }
+  .word2 span:nth-child(4) {
+    animation-delay: 6s;
+  }
+  .word2 span:nth-child(5) {
+    animation-delay: 8s;
+  }
+  /* button styles  */
+  .intro_buttons2 {
+    /* display: flex; */
+    /* flex-direction: row; */
+    align-items: center;
+    /* gap: 10rem; */
+    margin-top: 2rem;
+  }
+  .intro_buttons2 .button2 {
+    font-size: 0.8rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgb(248, 179, 5);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid rgb(248, 179, 5);
+    padding: 0.8rem 3rem;
+
+    box-shadow: 0px 0px 5px 5px rgb(248, 179, 5);
+
+    /* background: rgb(248, 179, 5); */
+  }
+  /* Social Icons  */
+  .social_icons2 {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  .social_icons a {
+    font-size: 1.9rem;
+    color: rgb(248, 179, 5);
+    cursor: pointer;
+  }
+  .social_icons a:hover {
+    transform: translateY(-2.5px);
+  }
+}
+@media (max-width: 1100px) {
+  .skill_box2 {
+    /* margin-right: 5rem; */
+  }
+}
+@media (max-width: 1000px) {
+  .image_box2 {
+    width: 260px;
+    height: 260px;
+  }
+  .my_name2 h1 {
+    font-size: 2rem;
+    text-shadow: 2.5px 1px rgb(10, 24, 218);
+  }
+  .my_name2 span {
+    font-size: 1.5rem;
+  }
+  .skill_box2 {
+    margin-right: 10rem;
+  }
+  .skill_box2 h3 {
+    font-size: 1.2rem;
+  }
+  .word2 span {
+    font-size: 1.2rem;
+    width: 300px;
+  }
+  /* button styles  */
+  .intro_buttons2 .button2 {
+    padding: 0.5rem 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .image_box2 {
+    width: 250px;
+    height: 250px;
+  }
+  .my_name2 h1 {
+    font-size: 1.8rem;
+    text-shadow: 2.5px 1px rgb(10, 24, 218);
+  }
+  .my_name2 span {
+    font-size: 1.3rem;
+  }
+  .skill_box2 {
+    /* margin-right: 8rem; */
+  }
+  .skill_box2 h3 {
+    font-size: 1rem;
+  }
+  .word2 span {
+    font-size: 1rem;
+    width: 200px;
+  }
+  /* button styles  */
+  .intro_buttons2 .button2 {
+    padding: 0.5rem 1.8rem;
+  }
+}
